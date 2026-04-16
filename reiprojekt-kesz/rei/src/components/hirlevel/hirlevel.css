@@ -1,0 +1,61 @@
+.hirlevel-szekcio {
+  background-color: #000;
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+.hirlevel-alcim {
+  color: #00ff00;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.hirlevel-cim {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.hirlevel-kiemeles {
+  color: #00ff00;
+}
+
+.hirlevel-szoveg {
+  font-size: 16px;
+  margin-bottom: 30px;
+  opacity: 0.8;
+}
+
+.hirlevel-urlap {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.hirlevel-input {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  color: #fff;
+  flex-grow: 1;
+}
+
+.hirlevel-gomb {
+  background-color: #00ff00;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+}

@@ -1,0 +1,226 @@
+.kosar-oldal {
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
+  padding: 40px 48px;
+  font-family: system-ui, -apple-system, sans-serif;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.kosar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.kosar-header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.kosar-urit-gomb {
+  background: none;
+  border: 1px solid #333;
+  color: #888;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.kosar-urit-gomb:hover { border-color: #ff3333; color: #ff3333; }
+
+.kosar-betoltes { color: #666; font-size: 14px; padding: 40px; text-align: center; }
+
+.kosar-ures {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.kosar-ures-ikon { font-size: 64px; margin-bottom: 20px; }
+.kosar-ures h2 { font-size: 22px; margin: 0 0 12px; }
+.kosar-ures p { color: #666; font-size: 14px; margin: 0 0 24px; }
+
+.kosar-vasarlj-gomb, .kosar-bejel-gomb {
+  display: inline-block;
+  background: none;
+  border: 1px solid #00ff00;
+  color: #00ff00;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.kosar-vasarlj-gomb:hover, .kosar-bejel-gomb:hover { background: #00ff00; color: #000; }
+
+.kosar-hiba {
+  background: #1a0000;
+  border: 1px solid #ff3333;
+  color: #ff6666;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.kosar-siker {
+  background: #001a00;
+  border: 1px solid #00aa00;
+  color: #00dd00;
+  padding: 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.kosar-profil-gomb {
+  background: none;
+  border: 1px solid #00aa00;
+  color: #00dd00;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+.kosar-profil-gomb:hover { background: #00aa00; color: #000; }
+
+.kosar-tartalom {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 32px;
+  align-items: start;
+}
+
+.kosar-tetelek { display: flex; flex-direction: column; gap: 12px; }
+
+.kosar-tetel {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.kosar-tetel-kep {
+  width: 72px;
+  height: 72px;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.kosar-tetel-info { flex: 1; }
+.kosar-tetel-info h3 { font-size: 14px; font-weight: 600; margin: 0 0 6px; }
+
+.kosar-tetel-ar { font-size: 13px; color: #22c55e; font-weight: 600; }
+
+.kosar-mennyiseg {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.kosar-mennyiseg button {
+  width: 28px;
+  height: 28px;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.kosar-mennyiseg button:hover:not(:disabled) { background: #333; }
+.kosar-mennyiseg button:disabled { opacity: 0.4; cursor: not-allowed; }
+.kosar-mennyiseg span { font-size: 15px; font-weight: 600; min-width: 20px; text-align: center; }
+
+.kosar-tetel-reszosszeg {
+  font-size: 14px;
+  font-weight: 700;
+  color: #22c55e;
+  min-width: 100px;
+  text-align: right;
+}
+
+.kosar-torol-gomb {
+  background: none;
+  border: none;
+  color: #555;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px;
+  transition: color 0.2s;
+}
+.kosar-torol-gomb:hover { color: #ff3333; }
+
+.kosar-osszesites {
+  background: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  border-radius: 8px;
+  padding: 24px;
+  position: sticky;
+  top: 20px;
+}
+
+.kosar-osszesites h3 {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 20px;
+  color: #888;
+}
+
+.kosar-ossz-sor {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 12px;
+}
+
+.kosar-ingyenes { color: #22c55e; font-weight: 600; }
+
+.kosar-vegosszeg {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  border-top: 1px solid #1a1a1a;
+  padding-top: 16px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+
+.kosar-rendeles-gomb {
+  width: 100%;
+  background: linear-gradient(135deg, #00ff00, #00cc00);
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  padding: 14px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.kosar-rendeles-gomb:hover:not(:disabled) { opacity: 0.9; }
+.kosar-rendeles-gomb:disabled { opacity: 0.5; cursor: not-allowed; }

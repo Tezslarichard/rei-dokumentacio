@@ -1,0 +1,116 @@
+.sikeres-oldal {
+  min-height: 100vh;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.sikeres-kártya {
+  background: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  border-radius: 12px;
+  padding: 48px 40px;
+  max-width: 540px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+.sikeres-ikon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00ff00, #00cc00);
+  color: #000;
+  font-size: 32px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+
+.sikeres-kártya h1 {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.sikeres-rendeles-id {
+  font-size: 14px;
+  color: #22c55e;
+  margin: 0 0 8px;
+}
+
+.sikeres-email-info {
+  font-size: 13px;
+  color: #666;
+  margin: 0 0 32px;
+}
+
+.sikeres-reszletek {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.sikeres-blokk {
+  background: #111;
+  border: 1px solid #1a1a1a;
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-size: 13px;
+  color: #ccc;
+  line-height: 1.7;
+}
+
+.sikeres-blokk-cim {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.sikeres-osszeg {
+  font-size: 18px;
+  font-weight: 700;
+  color: #22c55e;
+}
+
+.sikeres-gombok {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sikeres-profil-gomb {
+  background: linear-gradient(135deg, #00ff00, #00cc00);
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  padding: 13px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.sikeres-profil-gomb:hover { opacity: 0.85; }
+
+.sikeres-vasarlj-gomb {
+  background: none;
+  border: 1px solid #2a2a2a;
+  color: #888;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.sikeres-vasarlj-gomb:hover { border-color: #444; color: #ccc; }

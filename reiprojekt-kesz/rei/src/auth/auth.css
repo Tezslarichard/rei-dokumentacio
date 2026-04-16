@@ -1,0 +1,139 @@
+.auth-oldal {
+  min-height: 100vh;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.auth-doboz {
+  background: #0a0a0a;
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 48px 40px;
+  width: 100%;
+  max-width: 420px;
+}
+
+.auth-logo {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  background: linear-gradient(to right, #00ff00, #ff00ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.auth-cim {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  margin: 0 0 8px;
+  letter-spacing: 1px;
+}
+
+.auth-alcim {
+  font-size: 13px;
+  color: #666;
+  text-align: center;
+  margin: 0 0 32px;
+}
+
+.auth-hiba {
+  background: #1a0000;
+  border: 1px solid #ff3333;
+  color: #ff6666;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.auth-siker {
+  background: #001a00;
+  border: 1px solid #00aa00;
+  color: #00dd00;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.auth-mezo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.auth-mezo label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #888;
+  font-weight: 500;
+}
+
+.auth-mezo input {
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #fff;
+  padding: 12px 14px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.auth-mezo input:focus {
+  border-color: #00ff00;
+}
+
+.auth-mezo input::placeholder { color: #444; }
+
+.auth-gomb {
+  background: linear-gradient(135deg, #00ff00, #00cc00);
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  padding: 14px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.auth-gomb:hover:not(:disabled) { opacity: 0.9; transform: translateY(-1px); }
+.auth-gomb:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.auth-link-szoveg {
+  text-align: center;
+  color: #555;
+  font-size: 13px;
+  margin-top: 24px;
+  margin-bottom: 0;
+}
+
+.auth-link {
+  color: #00ff00;
+  text-decoration: none;
+  font-weight: 600;
+}
+.auth-link:hover { text-decoration: underline; }

@@ -1,0 +1,410 @@
+.fizetes-oldal {
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
+  padding: 40px 48px;
+  font-family: system-ui, -apple-system, sans-serif;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ── Lépésjelző ─────────────────────────────────────────── */
+
+.fizetes-lepesek {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.fizetes-lepes {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #444;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.fizetes-lepes.aktiv { color: #fff; }
+.fizetes-lepes.kesz { color: #22c55e; }
+
+.fizetes-lepes-szam {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #111;
+  border: 1px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.fizetes-lepes.aktiv .fizetes-lepes-szam {
+  background: #00ff00;
+  border-color: #00ff00;
+  color: #000;
+}
+
+.fizetes-lepes.kesz .fizetes-lepes-szam {
+  background: #22c55e;
+  border-color: #22c55e;
+  color: #000;
+}
+
+.fizetes-lepes-vonal {
+  width: 48px;
+  height: 1px;
+  background: #222;
+  margin: 0 12px;
+}
+
+/* ── Layout ─────────────────────────────────────────────── */
+
+.fizetes-tartalom {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 32px;
+  align-items: start;
+}
+
+/* ── Panel ──────────────────────────────────────────────── */
+
+.fizetes-panel {
+  background: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  border-radius: 10px;
+  padding: 28px;
+}
+
+.fizetes-panel h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 24px;
+  letter-spacing: 0.5px;
+}
+
+/* ── Form elemek ────────────────────────────────────────── */
+
+.fizetes-sor {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 0;
+}
+
+.fizetes-mezo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+.fizetes-mezo--kicsi { flex: 0 0 120px; }
+
+.fizetes-mezo label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #888;
+}
+
+.fizetes-mezo input,
+.fizetes-mezo textarea {
+  background: #111;
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+  color: #fff;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: border-color 0.2s;
+  outline: none;
+}
+
+.fizetes-mezo input:focus,
+.fizetes-mezo textarea:focus {
+  border-color: #00ff00;
+}
+
+.fizetes-mezo input::placeholder,
+.fizetes-mezo textarea::placeholder { color: #444; }
+
+.fizetes-mezo textarea { resize: vertical; }
+
+/* ── Gombok ─────────────────────────────────────────────── */
+
+.fizetes-gomb-sor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  gap: 12px;
+}
+
+.fizetes-tovabb-gomb {
+  background: linear-gradient(135deg, #00ff00, #00cc00);
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  padding: 13px 28px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  margin-top: 24px;
+}
+.fizetes-tovabb-gomb:hover:not(:disabled) { opacity: 0.85; }
+.fizetes-tovabb-gomb:disabled { opacity: 0.35; cursor: not-allowed; }
+
+.fizetes-vissza-gomb {
+  background: none;
+  border: 1px solid #333;
+  color: #888;
+  border-radius: 6px;
+  padding: 12px 20px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.fizetes-vissza-gomb:hover { border-color: #555; color: #ccc; }
+
+.fizetes-lead-gomb {
+  background: linear-gradient(135deg, #00ff00, #00cc00);
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  padding: 13px 28px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.fizetes-lead-gomb:hover:not(:disabled) { opacity: 0.85; }
+.fizetes-lead-gomb:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* ── Fizetési módok ─────────────────────────────────────── */
+
+.fizetes-modok {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.fizetes-mod-kártya {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 8px;
+  padding: 16px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  position: relative;
+}
+
+.fizetes-mod-kártya input[type="radio"] { display: none; }
+
+.fizetes-mod-kártya.kivalasztott { border-color: #00ff00; background: #001a00; }
+
+.fizetes-mod-ikon { font-size: 22px; flex-shrink: 0; }
+
+.fizetes-mod-cim { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+.fizetes-mod-leiras { font-size: 12px; color: #666; }
+
+.fizetes-mod-pipa {
+  position: absolute;
+  right: 16px;
+  color: #00ff00;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.fizetes-kártya-mezok {
+  background: #0d0d0d;
+  border: 1px solid #1a1a1a;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 8px;
+}
+
+.fizetes-demo-info {
+  font-size: 12px;
+  color: #f59e0b;
+  background: #1a1200;
+  border: 1px solid #3a2800;
+  border-radius: 5px;
+  padding: 8px 12px;
+  margin: 0 0 16px;
+}
+
+.fizetes-atutalas-info {
+  background: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 13px;
+  color: #888;
+  line-height: 1.8;
+  margin-bottom: 8px;
+}
+.fizetes-atutalas-info strong { color: #22c55e; }
+
+/* ── Összesítő lépés ────────────────────────────────────── */
+
+.fizetes-osszesito-blokk {
+  background: #111;
+  border: 1px solid #1a1a1a;
+  border-radius: 8px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+  position: relative;
+}
+
+.fizetes-osszesito-blokk h3 {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #555;
+  margin: 0 0 10px;
+}
+
+.fizetes-osszesito-adat {
+  font-size: 13px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.fizetes-megjegyzes { color: #888; font-style: italic; }
+
+.fizetes-szerkeszt-gomb {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: none;
+  border: 1px solid #2a2a2a;
+  color: #555;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.fizetes-szerkeszt-gomb:hover { border-color: #444; color: #888; }
+
+.fizetes-osszesito-tetel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+  border-bottom: 1px solid #1a1a1a;
+  font-size: 13px;
+}
+.fizetes-osszesito-tetel:last-child { border-bottom: none; }
+
+.fizetes-osszesito-szin {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.fizetes-osszesito-nev { flex: 1; color: #ccc; }
+.fizetes-osszesito-db { color: #555; font-size: 12px; }
+.fizetes-osszesito-ar { color: #22c55e; font-weight: 600; }
+
+.fizetes-hiba {
+  background: #1a0000;
+  border: 1px solid #ff3333;
+  color: #ff6666;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+/* ── Jobb oldali összeg doboz ───────────────────────────── */
+
+.fizetes-jobb { position: sticky; top: 20px; }
+
+.fizetes-osszeg-doboz {
+  background: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  border-radius: 10px;
+  padding: 22px;
+}
+
+.fizetes-osszeg-doboz h3 {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #666;
+  margin: 0 0 16px;
+}
+
+.fizetes-tetel-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.fizetes-mini-tetel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.fizetes-mini-szin {
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.fizetes-mini-nev { flex: 1; color: #ccc; }
+.fizetes-mini-db { color: #555; font-size: 11px; margin-left: 4px; }
+.fizetes-mini-ar { color: #fff; font-weight: 600; white-space: nowrap; }
+
+.fizetes-ossz-sor {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.fizetes-ingyenes { color: #22c55e; font-weight: 600; }
+
+.fizetes-vegosszeg {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  border-top: 1px solid #1a1a1a;
+  padding-top: 14px;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+/* ── Reszponzív ─────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .fizetes-oldal { padding: 24px 16px; }
+  .fizetes-tartalom { grid-template-columns: 1fr; }
+  .fizetes-jobb { position: static; }
+  .fizetes-sor { flex-direction: column; gap: 0; }
+  .fizetes-mezo--kicsi { flex: 1; }
+  .fizetes-lepes span { display: none; }
+}

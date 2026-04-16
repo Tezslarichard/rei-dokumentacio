@@ -1,0 +1,296 @@
+.profil-oldal {
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
+  padding: 40px 48px;
+  font-family: system-ui, -apple-system, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.profil-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.profil-avatar {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, #00ff00, #ff00ff);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: 900;
+  color: #000;
+  flex-shrink: 0;
+}
+
+.profil-nev {
+  margin: 0 0 4px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.profil-email {
+  margin: 0;
+  font-size: 13px;
+  color: #666;
+}
+
+.profil-admin-jelveny {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff00ff, #9900ff);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 2px 8px;
+  border-radius: 3px;
+  margin-top: 6px;
+}
+
+.profil-kijelentkez-gomb {
+  margin-left: auto;
+  background: none;
+  border: 1px solid #333;
+  color: #888;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.profil-kijelentkez-gomb:hover { border-color: #ff3333; color: #ff3333; }
+
+.profil-tabok {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.profil-tab {
+  background: none;
+  border: none;
+  color: #666;
+  padding: 12px 20px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: all 0.2s;
+}
+.profil-tab:hover { color: #fff; }
+.profil-tab.aktiv { color: #00ff00; border-bottom-color: #00ff00; }
+
+.profil-tartalom h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 24px;
+  color: #ccc;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.profil-hiba {
+  background: #1a0000;
+  border: 1px solid #ff3333;
+  color: #ff6666;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.profil-siker {
+  background: #001a00;
+  border: 1px solid #00aa00;
+  color: #00dd00;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.profil-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 480px;
+}
+
+.profil-mezo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profil-mezo label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #666;
+}
+
+.profil-mezo input {
+  background: #0a0a0a;
+  border: 1px solid #222;
+  border-radius: 6px;
+  color: #fff;
+  padding: 12px 14px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+.profil-mezo input:focus { border-color: #00ff00; }
+
+.profil-elvalaszto {
+  margin: 8px 0 4px;
+  padding: 12px 0;
+  border-top: 1px solid #1a1a1a;
+}
+.profil-elvalaszto span {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #444;
+}
+
+.profil-mentes-gomb {
+  background: linear-gradient(135deg, #00ff00, #00cc00);
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  padding: 13px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: opacity 0.2s;
+}
+.profil-mentes-gomb:hover:not(:disabled) { opacity: 0.9; }
+.profil-mentes-gomb:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.profil-betoltes { color: #666; font-size: 14px; }
+
+.profil-ures-rendeles {
+  text-align: center;
+  padding: 48px 0;
+  color: #555;
+}
+
+.profil-vasarlj-gomb {
+  background: none;
+  border: 1px solid #333;
+  color: #00ff00;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: all 0.2s;
+}
+.profil-vasarlj-gomb:hover { background: #00ff00; color: #000; }
+
+.rendelesek-lista { display: flex; flex-direction: column; gap: 12px; }
+
+.rendeles-kartya {
+  background: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.rendeles-fejlec {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.rendeles-id { font-size: 15px; font-weight: 600; }
+
+.rendeles-statusz {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+.statusz-pending { background: #1a1400; color: #ffcc00; }
+.statusz-completed { background: #001a00; color: #00ff00; }
+.statusz-cancelled { background: #1a0000; color: #ff3333; }
+
+.rendeles-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #666;
+}
+.rendeles-info strong { color: #00ff00; }
+
+/* Rendelés tételek */
+.rendeles-tetelek-lista {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid #1a1a1a;
+}
+.rendeles-tetelek-cim {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #444;
+  margin-bottom: 10px;
+}
+.rendeles-tetel-sor-profil {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 0;
+  border-bottom: 1px solid #111;
+  font-size: 13px;
+}
+.rendeles-tetel-sor-profil:last-child { border-bottom: none; }
+.rendeles-tetel-szin-pont {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.rendeles-tetel-nev { flex: 1; color: #ccc; }
+.rendeles-tetel-db  { color: #555; }
+.rendeles-tetel-ar  { color: #00ff00; font-weight: 600; }
+
+.rendeles-reszlet-gomb {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  background: none;
+  border: 1px solid #1a1a1a;
+  color: #555;
+  border-radius: 4px;
+  padding: 7px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.rendeles-reszlet-gomb:hover { border-color: #333; color: #999; }
+
+/* Új státuszok */
+.statusz-processing { background: #001020; color: #00aaff; }
+.statusz-shipped    { background: #100030; color: #aa44ff; }
+.statusz-delivered  { background: #001a00; color: #00ff00; }

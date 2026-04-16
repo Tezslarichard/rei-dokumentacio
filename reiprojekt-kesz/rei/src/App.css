@@ -1,0 +1,15 @@
+
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  background-color: #000; 
+  color: #fff;
+  font-family: sans-serif;
+}
+
+
+.main-container {
+  border: 4px solid #fff; 
+  min-height: 100vh; 
+  box-sizing: border-box; 
+}

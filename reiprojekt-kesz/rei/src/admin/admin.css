@@ -1,0 +1,392 @@
+/* ── Admin layout ── */
+.admin-oldal {
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
+  font-family: system-ui, -apple-system, sans-serif;
+  display: flex;
+}
+
+.admin-sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  background: #080808;
+  border-right: 1px solid #1a1a1a;
+  padding: 32px 0;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-sidebar-logo {
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  background: linear-gradient(135deg, #00ff00, #ff00ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding: 0 24px 24px;
+  border-bottom: 1px solid #1a1a1a;
+  margin-bottom: 16px;
+}
+
+.admin-sidebar-cimke {
+  font-size: 10px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 8px 24px 4px;
+}
+
+.admin-nav-gomb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  color: #555;
+  padding: 11px 24px;
+  font-size: 13px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  transition: all 0.15s;
+  border-left: 2px solid transparent;
+}
+.admin-nav-gomb:hover { color: #fff; background: #0f0f0f; }
+.admin-nav-gomb.aktiv { color: #00ff00; border-left-color: #00ff00; background: #001a00; }
+.admin-nav-gomb .ikon { font-size: 16px; }
+
+.admin-sidebar-lap {
+  margin-top: auto;
+  padding: 16px 24px;
+  border-top: 1px solid #1a1a1a;
+}
+.admin-vissza-gomb {
+  display: block;
+  color: #555;
+  font-size: 12px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.admin-vissza-gomb:hover { color: #fff; }
+
+/* ── Fő tartalom ── */
+.admin-tartalom {
+  flex: 1;
+  padding: 40px 48px;
+  overflow-y: auto;
+}
+
+.admin-oldal-fejlec {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.admin-oldal-fejlec h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* ── Dashboard kártyák ── */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.dashboard-kartya {
+  background: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  border-radius: 10px;
+  padding: 24px;
+  transition: border-color 0.2s;
+}
+.dashboard-kartya:hover { border-color: #333; }
+
+.dashboard-kartya-szam {
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.dashboard-kartya-cimke {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #555;
+}
+
+.szin-zold { color: #00ff00; }
+.szin-lila { color: #cc00ff; }
+.szin-kek  { color: #0088ff; }
+.szin-sarga { color: #ffcc00; }
+.szin-piros { color: #ff3333; }
+
+/* ── Táblázat ── */
+.admin-tabla-wrap {
+  overflow-x: auto;
+  border: 1px solid #1a1a1a;
+  border-radius: 10px;
+}
+
+.admin-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.admin-tabla th {
+  text-align: left;
+  padding: 12px 16px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #444;
+  border-bottom: 1px solid #1a1a1a;
+  background: #080808;
+  white-space: nowrap;
+}
+
+.admin-tabla td {
+  padding: 13px 16px;
+  border-bottom: 1px solid #111;
+  color: #ccc;
+  vertical-align: middle;
+}
+
+.admin-tabla tr:last-child td { border-bottom: none; }
+.admin-tabla tr:hover td { background: #0a0a0a; }
+
+/* ── Státusz badge ── */
+.statusz-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.statusz-pending    { background: #1a1400; color: #ffcc00; }
+.statusz-processing { background: #001020; color: #00aaff; }
+.statusz-shipped    { background: #100030; color: #aa44ff; }
+.statusz-delivered  { background: #001a00; color: #00ff00; }
+.statusz-cancelled  { background: #1a0000; color: #ff3333; }
+
+/* ── Gombok ── */
+.admin-gomb {
+  padding: 9px 18px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.admin-gomb-elsodleges { background: #00ff00; color: #000; }
+.admin-gomb-elsodleges:hover { background: #00dd00; }
+.admin-gomb-masodlagos { background: #1a1a1a; color: #ccc; border: 1px solid #333; }
+.admin-gomb-masodlagos:hover { background: #222; color: #fff; }
+.admin-gomb-veszelyes { background: #1a0000; color: #ff4444; border: 1px solid #330000; }
+.admin-gomb-veszelyes:hover { background: #ff3333; color: #fff; }
+.admin-gomb-kis { padding: 6px 12px; font-size: 11px; }
+.admin-gomb:disabled { opacity: 0.4; cursor: not-allowed; }
+
+/* ── Modal ── */
+.modal-hatter {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-doboz {
+  background: #0d0d0d;
+  border: 1px solid #252525;
+  border-radius: 12px;
+  padding: 32px;
+  width: 100%;
+  max-width: 520px;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+.modal-doboz h2 {
+  margin: 0 0 24px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.modal-mezo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.modal-mezo label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #555;
+}
+
+.modal-mezo input,
+.modal-mezo select,
+.modal-mezo textarea {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 6px;
+  color: #fff;
+  padding: 11px 14px;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+  width: 100%;
+}
+.modal-mezo input:focus,
+.modal-mezo select:focus,
+.modal-mezo textarea:focus { border-color: #00ff00; }
+.modal-mezo select option { background: #111; }
+.modal-mezo textarea { resize: vertical; min-height: 80px; font-family: inherit; }
+
+.modal-gombok {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+/* ── Form hibaüzenet ── */
+.admin-hiba {
+  background: #1a0000;
+  border: 1px solid #330000;
+  color: #ff6666;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+
+.admin-siker {
+  background: #001a00;
+  border: 1px solid #003300;
+  color: #00cc00;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+
+/* ── Betöltés ── */
+.admin-betoltes {
+  color: #444;
+  font-size: 14px;
+  padding: 40px 0;
+  text-align: center;
+}
+
+/* ── Select (státusz) ── */
+.statusz-select {
+  background: #111;
+  border: 1px solid #222;
+  color: #fff;
+  border-radius: 4px;
+  padding: 5px 8px;
+  font-size: 11px;
+  cursor: pointer;
+  outline: none;
+}
+.statusz-select:focus { border-color: #00ff00; }
+
+/* ── Admin badge ── */
+.admin-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff00ff, #9900ff);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 2px 7px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+/* ── Rendelés tételek (összefoglalóban) ── */
+.rendeles-tetelek {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.rendeles-tetel-sor {
+  display: flex;
+  gap: 8px;
+  font-size: 12px;
+  color: #666;
+}
+.rendeles-tetel-szin {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ── Keresőmező ── */
+.admin-kereses {
+  background: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  border-radius: 6px;
+  color: #fff;
+  padding: 9px 14px;
+  font-size: 13px;
+  outline: none;
+  width: 260px;
+  transition: border-color 0.2s;
+}
+.admin-kereses:focus { border-color: #00ff00; }
+
+.admin-fejlec-eszkozok {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* ── Legújabb rendelések (dashboard) ── */
+.legujabb-rendeles-sor td:first-child { font-weight: 600; color: #fff; }
+
+/* ── Üzenet részlet ── */
+.uzenet-szoveg {
+  max-width: 320px;
+  color: #888;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 768px) {
+  .admin-oldal { flex-direction: column; }
+  .admin-sidebar { width: 100%; height: auto; position: relative; flex-direction: row; flex-wrap: wrap; padding: 16px; gap: 4px; }
+  .admin-tartalom { padding: 20px 16px; }
+}

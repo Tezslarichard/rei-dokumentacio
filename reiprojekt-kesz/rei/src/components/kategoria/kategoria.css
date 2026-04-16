@@ -1,0 +1,38 @@
+.kategoriak-szekcio {
+  background-color: #000;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.kategoriak-cim {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.kategoriak-racs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.kategoriak-gomb {
+  background-color: #1a1a1a;
+  color: #fff;
+  border: 1px solid #333;
+  padding: 12px 25px;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.kategoriak-gomb:hover {
+  background-color: #00ff00;
+  color: #000;
+  border-color: #00ff00;
+}

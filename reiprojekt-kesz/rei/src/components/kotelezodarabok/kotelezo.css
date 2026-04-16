@@ -1,0 +1,79 @@
+.kotelezo-szekcio {
+  background-color: #000;
+  color: #fff;
+  padding: 80px 20px 40px;
+}
+
+.kotelezo-alcim {
+  color: #00ff00;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.kotelezo-cim {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.kotelezo-racs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.kotelezo-kartya {
+  width: 300px; 
+  background-color: #1a1a1a;
+  position: relative;
+}
+
+.kotelezo-jelzo {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff00ff; 
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.kotelezo-kep {
+
+  height: 350px;
+ 
+  background-color: #6d5b5a; 
+}
+.kotelezo-racs .kotelezo-kartya:nth-child(2) .kotelezo-kep {
+    
+    background-color: #9aff9a;
+}
+.kotelezo-racs .kotelezo-kartya:nth-child(3) .kotelezo-kep {
+  
+    background-color: #4d0000;
+}
+
+
+.kotelezo-termeknev {
+  font-size: 16px;
+  font-weight: normal;
+  padding: 15px 10px 0;
+  margin: 0;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.kotelezo-ar {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0 10px 15px;
+  margin: 0;
+}
